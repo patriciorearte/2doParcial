@@ -6,6 +6,8 @@ import React, { Fragment, useEffect, useState } from 'react'
 import Header from './componentes/Header';
 import Footer from './componentes/Footer';
 import Cartas from './componentes/Cartas';
+import Carrusel from './componentes/Carrusel';
+
 
 import './App.css';
 
@@ -35,12 +37,14 @@ function App() {
     <Fragment>
       <Header></Header>
             <div className='container mt-5'>
+              <Carrusel></Carrusel>
+            </div>
+            
+            <div className='container mt-5'>
                 <Cartas
                   listaDeEstados={lista}
                 ></Cartas>
             </div>
-            
-            
       <Footer></Footer>
     </Fragment>
   );

@@ -11,8 +11,8 @@ const Carrusel = () => {
                     width="80px" height="280px" 
                   />
                   <Carousel.Caption>
-                    <h3>Salud digital: Una estrategia de continuidad asistencial para personas con enfermedades no transmisibles durante la COVID-19</h3>
-                    <p>Las enfermedades no transmisibles (ENT) son la principal causa de muerte y discapacidad en todo el mundo. El manejo efectivo de estas condiciones crónicas depende en servicios continuos y el autocuidado. La salud digital puede garantizar la continuidad de la atención, especialmente cuando los servicios se interrumpen.</p>
+                    <h3>Abajo tendra informacion acerca COVID-19</h3>
+                    <p>Informacion de todos los estados de los EE.UU</p>
                   </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -24,8 +24,8 @@ const Carrusel = () => {
                   />
 
                   <Carousel.Caption>
-                    <h3>Hojas informativas COVID-19</h3>
-                    <p>La telerehabilitación se incorpora a la respuesta a la pandemia de COVID-19 a fin de facilitar la continuidad de la atención de los pacientes que puedan beneficiarse de consultas remotas, y de garantizar así una mayor protección de los grupos en situación de vulnerabilidad.</p>
+                    <h3>Abajo tendra informacion acerca COVID-19</h3>
+                    <p>Tendra informacion actulizada como: casos postivos ,numeros de fallecidos y muertes.</p>
                   </Carousel.Caption>
                 </Carousel.Item>
               
