@@ -1,24 +1,48 @@
-import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import React, { Fragment, useEffect, useState } from 'react'
+import Header from './componentes/Header';
+import Footer from './componentes/Footer';
+import Cartas from './componentes/Cartas';
+
 import './App.css';
 
 function App() {
+
+  const [lista,setlista]=useState([]);
+  
+  
+  useEffect(()=>{
+    consultarApi()
+  },[]);
+
+ 
+  const consultarApi= async()=> 
+  {
+    try{
+      const api = await fetch("https://api.covidtracking.com/v1/states/current.json")
+      const resultado= await api.json();
+      setlista(resultado);
+      console.log(resultado);
+      
+    }
+    catch(error){console.log(error);}
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Header></Header>
+            <div className='container mt-5'>
+                <Cartas
+                  listaDeEstados={lista}
+                ></Cartas>
+            </div>
+            
+            
+      <Footer></Footer>
+    </Fragment>
   );
 }
 
